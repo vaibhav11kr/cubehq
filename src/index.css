@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header{
+    margin: auto;
+    height: 4vh;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 96vh;
+  }
+  
+  .customer-list {
+    width: 400px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+  }
+  
+  .customer-card {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .customer-card.selected {
+    background-color: #f0f0f0;
+  }
+  
+  .customer-details-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .customer-details {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .customer-details h1 {
+    margin-top: 0;
+  }
+  
+.customer-details p{
+    text-align: center;
+}
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .photo-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
